@@ -1,14 +1,14 @@
 {
-    "name": "slam-mirrorbot",
+    "name": "slm_heroku",
     "description": "A Telegram bot for all your mirror needs",
-    "logo": "https://telegra.ph/file/019996f816db9ed576cff.jpg",
+    "logo": "https://i.ibb.co/dDNYJ72/photo-2021-07-18-00-59-41.jpg",
     "keywords": [
       "bot",
       "telegram",
       "python"
     ],
-    "repository": "https://github.com/ayushteke/slam_aria_mirror_bot_HEROKU",
-    "website": "https://github.com/ayushteke/slam_aria_mirror_bot_HEROKU",
+    "repository": "https://github.com/logmoe/slm_heroku",
+    "website": "https://github.com/logmoe/slm_heroku",
     "success_url": "https://t.me/TORRNET_TO_GDRIVE",
     "stack": "container",
     "env": {
@@ -18,10 +18,12 @@
       },
       "BOT_TOKEN": {
         "description": "The telegram bot token that you get from @BotFather.",
+        "value": "1363169444:AAGynBXdoa7gCRfixJO0uafSKE_afsZzwnI",
         "required": true
       },
       "GDRIVE_FOLDER_ID": {
         "description": "This is the folder ID of the Google Drive Folder to which you want to upload all the mirrors.",
+        "value": "1cdxo-uPmykHpdPwvKWL4C2cqyY0vIE6F",
         "required": true
       },
       "DOWNLOAD_DIR": {
@@ -36,15 +38,17 @@
       },
       "OWNER_ID": {
         "description": "The Telegram User ID of the Owner of the Bot. Get it by using /info in @MissRose_bot.",
+        "value": "1113944048",
         "required": true
       },
       "AUTO_DELETE_MESSAGE_DURATION": {
         "description": "Interval of time (in seconds), after which the bot deletes it's message (and command message) which is expected to be viewed instantly. Note: Set to -1 to never automatically delete messages.",
-        "value": "20",
+        "value": "-1",
         "required": true
       },
       "IS_TEAM_DRIVE": {
         "description": "Set to 'True' if GDRIVE_FOLDER_ID is from a Team Drive else False or Leave it empty.",
+        "value": "True",
         "required": false
       },
       "USE_SERVICE_ACCOUNTS": {
@@ -57,18 +61,22 @@
       },
       "INDEX_URL": {
         "description": "Refer to https://github.com/ParveenBhadooOfficial/Google-Drive-Index The URL should not have any trailing '/'.",
+        "value": "file.zenleecher.workers.dev/0:",
         "required": false
       },
       "TELEGRAM_API": {
         "description": "This is to authenticate to your Telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
+        "value": "1840603",
         "required": true
       },
       "TELEGRAM_HASH": {
         "description": "This is to authenticate to your Telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
+        "value": "1edca7c509013c3b78f7546127fc94f9",
         "required": true
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from https://dashboard.heroku.com/account.",
+        "value": "5c40057a-a4f0-40d9-81f1-830e48965366",
         "required": true
       },
       "HEROKU_APP_NAME": {
@@ -123,6 +131,7 @@
       },
       "STOP_DUPLICATE_MIRROR": {
         "description": "If this field is set to True, bot will check file in Drive, if it is present in Drive, downloading will be stopped.",
+        "value": "True",
         "required": false
       },
       "STOP_DUPLICATE_MEGA": {
@@ -141,6 +150,7 @@
       },
       "SHORTENER": {
         "description": "If you want to use shortener in Gdrive and index link.",
+        "value": "file.zenleecher.workers.dev/0:",
         "required": false
       },
       "SHORTENER_API": {
@@ -149,7 +159,7 @@
       },
       "IMAGE_URL": {
         "description": "Show Image/Logo in /start message, Use telegra.ph or any direct link image.",
-        "value": "https://telegra.ph/file/019996f816db9ed576cff.jpg",
+        "value": "https://i.ibb.co/dDNYJ72/photo-2021-07-18-00-59-41.jpg",
         "required": false
        },
       "VIEW_LINK": {

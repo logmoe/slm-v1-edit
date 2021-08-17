@@ -84,8 +84,8 @@
         "required": true
       },
       "UPSTREAM_REPO": {
-        "description": "Link for Bot Upstream Repo, If you want default update, Fill https://github.com/ayushteke/slam_aria_mirror_bot_HEROKU",
-        "value": "https://github.com/ayushteke/slam_aria_mirror_bot_HEROKU",
+        "description": "Link for Bot Upstream Repo, If you want default update, Fill https://github.com/logmoe/slm_heroku",
+        "value": "https://github.com/logmoe/slm_heroku",
         "required": true
       },
       "UPSTREAM_BRANCH": {

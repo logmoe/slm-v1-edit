@@ -100,19 +100,19 @@ def get_readable_message():
         msg = ""
         msg = ""
         for download in list(download_dict.values()):
-            msg += f"<b>☞ 🗃️File :</b> <code>{download.name()}</code>"
-            msg += f"\n<b>☞ 🚦Status :</b> <b>{download.status()}</b>"
+            msg += f"<b>🗃️ File :</b> <code>{download.name()}</code>"
+            msg += f"\n<b>🚦 Status :</b> <b>{download.status()}</b>"
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
-                msg += f"\n<b>☞ 📝Progress :</b> <code>{get_progress_bar_string(download)}</code> <b>{download.progress()}</b>"
+                msg += f"\n<b>📝 Progress :</b> <code>{get_progress_bar_string(download)}</code> <b>{download.progress()}</b>"
                 if download.status() == MirrorStatus.STATUS_DOWNLOADING:
-                    msg += f"\n<b>☞ 📥Downloaded :</b> <b>{get_readable_file_size(download.processed_bytes())}</b> <b>Of</b> <b>{download.size()}</b>" 
+                    msg += f"\n<b>📥 DL :</b> <b>{get_readable_file_size(download.processed_bytes())}</b> <b>Of</b> <b>{download.size()}</b>" 
                 else:
-                    msg += f"\n<b>☞ 📤Uploaded :</b> <b>{get_readable_file_size(download.processed_bytes())}</b> <b>Of</b> <b>{download.size()}</b>"
-                msg += f"\n<b>☞⚡️ Speed :</b> {download.speed()} || <b>☞ ETA:</b> {download.eta()} "
+                    msg += f"\n<b>📤 UP :</b> <b>{get_readable_file_size(download.processed_bytes())}</b> <b>Of</b> <b>{download.size()}</b>"
+                msg += f"\n<b>⚡️ Speed :</b> {download.speed()} || <b>☞ ETA:</b> {download.eta()} "
                 # if hasattr(download, 'is_torrent'):
                 try:
-                    msg += f"\n<b>☞ Peers :</b> {download.aria_download().connections} " \
-                           f"|| <b>☞ Seeders :</b> {download.aria_download().num_seeders}"
+                    msg += f"\n<b>Peers :</b> {download.aria_download().connections} " \
+                           f"|| <b>Seeders :</b> {download.aria_download().num_seeders}"
                 except:
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
